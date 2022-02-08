@@ -24,11 +24,8 @@ public class FileOpenManager {
         return files.get(fileExtension);
     }
 
-    public String removeKeyIfExist(String fileExtension, String fileName) {
-        if (files.containsKey(fileExtension) && Objects.equals(files.get(fileExtension), fileName)) {
-            files.remove(fileExtension);
-        }
-        return fileName;
+    public void removeKeyIfExist(String fileExtension) {
+        files.remove(fileExtension);
     }
 
     public List<String> getListOfAllKeysWithValues() {

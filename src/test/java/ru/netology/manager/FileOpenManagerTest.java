@@ -2,8 +2,6 @@ package ru.netology.manager;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.Set;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class FileOpenManagerTest {
@@ -52,7 +50,7 @@ class FileOpenManagerTest {
         manager.register(".doc", "Microsoft_Word");
         manager.register(".docx", "Microsoft_Word");
 
-        manager.removeKeyIfExist(".html", "Google_Chrome");
+        manager.removeKeyIfExist(".html");
 
         assertFalse(manager.getFiles().containsKey(".html"));
     }
