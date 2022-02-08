@@ -2,6 +2,8 @@ package ru.netology.manager;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.Set;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class FileOpenManagerTest {
@@ -65,9 +67,7 @@ class FileOpenManagerTest {
         manager.register(".doc", "Microsoft_Word");
         manager.register(".docx", "Microsoft_Word");
 
-        manager.getListOfAllKeysWithValues();
-
-        System.out.println("Ключи: " + manager.getFiles().keySet());
+        System.out.println("Ключи: " + manager.getListOfAllKeysWithValues());
     }
 
     @Test
@@ -80,7 +80,6 @@ class FileOpenManagerTest {
         manager.register(".doc", "Microsoft_Word");
         manager.register(".docx", "Microsoft_Word");
 
-        manager.getListOfAllValuesWithKeys();
-        System.out.println("Значения: " + (manager.getFiles().values()));
+        System.out.println("Значения: " + (manager.getListOfAllValuesWithKeys()));
     }
 }

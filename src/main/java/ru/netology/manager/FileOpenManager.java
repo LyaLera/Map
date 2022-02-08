@@ -31,14 +31,16 @@ public class FileOpenManager {
         return fileName;
     }
 
-    public void getListOfAllKeysWithValues() {
+    public List<String> getListOfAllKeysWithValues() {
         List<String> list = new ArrayList<>(files.keySet());
         Collections.sort(list);
+        return list;
     }
 
-    public void getListOfAllValuesWithKeys() {
+    public Set<String> getListOfAllValuesWithKeys() {
         List<String> list = new ArrayList<>(files.values());
         Set<String> set = new HashSet<>(list);
+        return set;
     }
 
 
